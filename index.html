@@ -17,16 +17,27 @@
       margin-right: -50%; 
       transform: translate(-50%, -50%)
     }
+    #link {
+      color: black;
+      text-decoration: none;    
+    }
     div.footer p {
       font-size: 8pt;
       text-align: center;
     }
   </style>
+  <script>
+    function over() {
+      document.getElementById("link").style.color = "blue";
+    }
+    function out() {
+      document.getElementById("link").style.color = "black";
+    }
+  </script>
 </head>
-
 <body>
   <div class="container">
-    <p><a href="http://github.com/marcosdanix/dice-thrower">你好，世界！</a></p>
+    <p><a id="link" onmouseover="over()" onmouseout="out()" href="https://github.com/marcosdanix/dice-thrower">你好，世界！</a></p>
   </div>
 
   <div class="footer">
